@@ -33,6 +33,7 @@ interface State {
   showPassword2: boolean
 }
 
+// eslint-disable-next-line react/display-name
 const CustomInput = forwardRef((props, ref) => {
   return <TextField fullWidth {...props} inputRef={ref} label='Birth Date' autoComplete='off' />
 })

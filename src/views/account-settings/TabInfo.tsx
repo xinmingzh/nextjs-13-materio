@@ -22,6 +22,7 @@ import DatePicker from 'react-datepicker'
 // ** Styled Components
 import DatePickerWrapper from 'src/@core/styles/libs/react-datepicker'
 
+// eslint-disable-next-line react/display-name
 const CustomInput = forwardRef((props, ref) => {
   return <TextField inputRef={ref} label='Birth Date' fullWidth {...props} />
 })

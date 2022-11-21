@@ -1,8 +1,5 @@
 'use client'
 
-// ** React Imports
-import { ReactNode } from 'react'
-
 // ** Next Import
 import Link from 'next/link'
 
@@ -11,9 +8,6 @@ import Button from '@mui/material/Button'
 import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
 import Box, { BoxProps } from '@mui/material/Box'
-
-// ** Layout Import
-import BlankLayout from 'src/@core/layouts/BlankLayout'
 
 // ** Demo Imports
 import FooterIllustrations from 'src/views/pages/misc/FooterIllustrations'
@@ -39,38 +33,27 @@ const Img = styled('img')(({ theme }) => ({
   }
 }))
 
-const TreeIllustration = styled('img')(({ theme }) => ({
-  left: 0,
-  bottom: '5rem',
-  position: 'absolute',
-  [theme.breakpoints.down('lg')]: {
-    bottom: 0
-  }
-}))
-
-const Error500 = () => {
+const Error401 = () => {
   return (
     <Box className='content-center'>
       <Box sx={{ p: 5, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
         <BoxWrapper>
-          <Typography variant='h1'>500</Typography>
+          <Typography variant='h1'>401</Typography>
           <Typography variant='h5' sx={{ mb: 1, fontSize: '1.5rem !important' }}>
-            Internal server error 👨🏻‍💻
+            You are not authorized! 🔐
           </Typography>
-          <Typography variant='body2'>Oops, something went wrong!</Typography>
+          <Typography variant='body2'>You don&prime;t have permission to access this page. Go Home!</Typography>
         </BoxWrapper>
-        <Img height='487' alt='error-illustration' src='/images/pages/500.png' />
-        <Link passHref href='/'>
+        <Img height='487' alt='error-illustration' src='/images/pages/401.png' />
+        <Link passHref href='/src/app/(blank)/pages'>
           <Button component='a' variant='contained' sx={{ px: 5.5 }}>
             Back to Home
           </Button>
         </Link>
       </Box>
-      <FooterIllustrations image={<TreeIllustration alt='tree' src='/images/pages/tree-3.png' />} />
+      <FooterIllustrations />
     </Box>
   )
 }
 
-Error500.getLayout = (page: ReactNode) => <BlankLayout>{page}</BlankLayout>
-
-export default Error500
+export default Error401

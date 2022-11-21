@@ -41,7 +41,7 @@ if (themeConfig.routingLoader) {
 
 import React from 'react'
 
-export default function RootLayout({ children }: { children: React.ReactElement }) {
+export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en">
     <head>

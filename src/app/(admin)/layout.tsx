@@ -1,5 +1,5 @@
 'use client'
 
-import UserLayout from '../../layouts/UserLayout'
+import UserLayout from 'src/layouts/UserLayout'
 
 export default UserLayout

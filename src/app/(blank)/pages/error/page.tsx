@@ -1,7 +1,7 @@
 'use client'
 
 // ** Component Import
-import Error404 from 'src/app/(blank)/404/page'
+import Error404 from 'src/views/pages/error/Error404'
 
 const ErrorPage = () => <Error404 />
 
